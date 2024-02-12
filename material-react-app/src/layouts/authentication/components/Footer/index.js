@@ -52,8 +52,19 @@ function Footer({ light }) {
             color={light ? "white" : "text"}
             fontSize={size.sm}
           >
-            &copy; {new Date().getFullYear()} All Rights Reserved.
-          </MDBox>
+            <Link href='#' target="_blank">
+          <MDTypography variant="button" fontWeight="medium">
+            &nbsp;All Rights Reserved&nbsp;
+          </MDTypography>
+        </Link>
+        by
+        <Link href="https://updivision.com" target="_blank">
+          <MDTypography variant="button" fontWeight="medium">
+            &nbsp;Cryptoverse&nbsp;
+          </MDTypography>
+        </Link>
+        for better Crypto Investments.
+      </MDBox>
           <MDBox
             component="ul"
             sx={({ breakpoints }) => ({
@@ -71,17 +82,6 @@ function Footer({ light }) {
               },
             })}
           >
-            <MDBox component="li" pr={2} lineHeight={1}>
-              <Link href="https://www.updivision.com/" target="_blank">
-                <MDTypography
-                  variant="button"
-                  fontWeight="regular"
-                  color={light ? "white" : "dark"}
-                >
-                  Documentation
-                </MDTypography>
-              </Link>
-            </MDBox>
             <MDBox component="li" px={2} lineHeight={1}>
               <Link href="https://www.creative-tim.com/presentation" target="_blank">
                 <MDTypography

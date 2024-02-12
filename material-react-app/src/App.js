@@ -173,19 +173,19 @@ export default function App() {
         <Helmet>
           <meta
             name="keywords"
-            content="creative tim, updivision, material, node.js json:api, html dashboard, node.js, react, api admin, react node.js, html css dashboard node.js, material dashboard node.js, node.js api, react material dashboard, material admin, react dashboard, react admin, web dashboard, bootstrap 5 dashboard node.js, bootstrap 5, css3 dashboard, bootstrap 5 admin node.js, material dashboard bootstrap 5 node.js, frontend, api dashboard, responsive bootstrap 5 dashboard, api, material dashboard, material node.js bootstrap 5 dashboard, json:api"
+            content="CryptoCurrency Investments Firm"
           />
           <meta
             name="description"
-            content="A free full stack app powered by MUI component library, React and Node.js API, featuring dozens of handcrafted UI elements"
+            content="CryptoCurrency Investments Firm"
           />
           <meta
             itemProp="name"
-            content="Material Dashboard 2 React Node.js by Creative Tim & UPDIVISION"
+            content="CryptoCurrency Investments Firm"
           />
           <meta
             itemProp="description"
-            content="A free full stack app powered by MUI component library, React and Node.js API, featuring dozens of handcrafted UI elements"
+            content="CryptoCurrency Investments Firm"
           />
           <meta
             itemProp="image"
@@ -195,36 +195,22 @@ export default function App() {
           <meta name="twitter:site" content="@creativetim" />
           <meta
             name="twitter:title"
-            content="Material Dashboard 2 React Node.js by Creative Tim & UPDIVISION"
+            content="CryptoCurrency Investments Firm"
           />
           <meta
             name="twitter:description"
-            content="A free full stack app powered by MUI component library, React and Node.js API, featuring dozens of handcrafted UI elements"
+            content="CryptoCurrency Investments Firm"
           />
-          <meta name="twitter:creator" content="@creativetim" />
-          <meta
-            name="twitter:image"
-            content="https://s3.amazonaws.com/creativetim_bucket/products/157/original/react-material-dashboard-nodejs.jpg?1664786816"
-          />
-          <meta property="fb:app_id" content="655968634437471" />
+          <meta name="twitter:creator" content="@deadtargaryan" />
           <meta
             property="og:title"
-            content="Material Dashboard 2 React Node.js by Creative Tim & UPDIVISION"
-          />
-          <meta property="og:type" content="article" />
-          <meta
-            property="og:url"
-            content="https://www.creative-tim.com/live/react-material-dashboard-node.js/"
-          />
-          <meta
-            property="og:image"
-            content="https://s3.amazonaws.com/creativetim_bucket/products/157/original/react-material-dashboard-nodejs.jpg?1664786816"
+            content="CryptoCurrency Investments Firm"
           />
           <meta
             property="og:description"
-            content="A free full stack app powered by MUI component library, React and Node.js API, featuring dozens of handcrafted UI elements"
+            content="CryptoCurrency Investments Firm"
           />
-          <meta property="og:site_name" content="Creative Tim" />
+          <meta property="og:site_name" content="CryptoVerse" />
         </Helmet>
       )}
       {direction === "rtl" ? (

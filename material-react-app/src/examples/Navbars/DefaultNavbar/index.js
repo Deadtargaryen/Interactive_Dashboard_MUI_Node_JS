@@ -157,7 +157,7 @@ function DefaultNavbar({ transparent, light, action }) {
         {action &&
           (action.type === "internal" ? (
             <MDBox display={{ xs: "none", lg: "inline-block" }}>
-              <MDButton
+              {/* <MDButton
                 component={Link}
                 to={action.route}
                 variant="gradient"
@@ -165,11 +165,11 @@ function DefaultNavbar({ transparent, light, action }) {
                 size="small"
               >
                 {action.label}
-              </MDButton>
+              </MDButton> */}
             </MDBox>
           ) : (
             <MDBox display={{ xs: "none", lg: "inline-block" }}>
-              <MDButton
+              {/* <MDButton
                 component="a"
                 href={action.route}
                 target="_blank"
@@ -180,7 +180,7 @@ function DefaultNavbar({ transparent, light, action }) {
                 sx={{ mt: -0.3 }}
               >
                 {action.label}
-              </MDButton>
+              </MDButton> */}
             </MDBox>
           ))}
         <MDBox

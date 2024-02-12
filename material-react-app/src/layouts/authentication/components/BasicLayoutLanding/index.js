@@ -86,11 +86,7 @@ function BasicLayout({ image, children }) {
                     width="80%"
                   >
                     <Typography variant="h3" style={{ color: "white" }}>
-                      Log in to Material Dashboard NodeJS Live Preview
-                    </Typography>
-                    <Typography variant="body2" style={{ color: "white" }} margin="0.5rem 0">
-                      Log in to see how you can go from frontend to fullstack in an instant with an
-                      API-based NodeJS backend
+                      Log in to CryptoVerse
                     </Typography>
                     <MDBox
                       display="flex"
@@ -114,11 +110,11 @@ function BasicLayout({ image, children }) {
                               >
                                 Username{" "}
                                 <Typography variant="span" fontWeight="700">
-                                  admin@jsonapi.com
+                                  as your registration email
                                 </Typography>{" "}
-                                with password{" "}
+                                and{" "}
                                 <Typography variant="span" fontWeight="700">
-                                  secret
+                                  your password
                                 </Typography>
                               </Typography>
                             }
