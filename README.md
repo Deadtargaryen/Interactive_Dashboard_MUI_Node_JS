@@ -29,7 +29,7 @@ For Windows installation, refer to [Node.js on Windows](https://phoenixnap.com/k
 5. Run the following command to start the ExpressJS API:
 
     ```bash
-    npm start
+    npm start:dev
     ```
 
 ### Material React Frontend Installation
@@ -80,4 +80,4 @@ If you encounter any issues or have feedback, please use [GitHub Issues](https:/
 ## Licensing
 
 - Copyright 2024 [Temple Labs](#)
-- Temple Labs [license](#)
+- Temple Labs [license](https://github.com/Deadtargaryen/Interactive_Dashboard_MUI_Node_JS/blob/main/LICENSE.md)
