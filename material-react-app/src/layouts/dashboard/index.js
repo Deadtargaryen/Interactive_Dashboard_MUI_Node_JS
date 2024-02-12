@@ -48,12 +48,12 @@ function Dashboard() {
               <ComplexStatisticsCard
                 color="dark"
                 icon="weekend"
-                title="Bookings"
-                count={281}
+                title="Sign-up Bonus"
+                count="$2000.00"
                 percentage={{
                   color: "success",
-                  amount: "+55%",
-                  label: "than lask week",
+                  amount: "+20%",
+                  label: "welcome bonus",
                 }}
               />
             </MDBox>
@@ -62,12 +62,12 @@ function Dashboard() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 icon="leaderboard"
-                title="Today's Users"
-                count="2,300"
+                title="Total Transactions"
+                count="0"
                 percentage={{
-                  color: "success",
-                  amount: "+3%",
-                  label: "than last month",
+                  color: "error",
+                  amount: "+0%",
+                  label: "in last month",
                 }}
               />
             </MDBox>
@@ -76,13 +76,13 @@ function Dashboard() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="success"
-                icon="store"
+                icon="paid"
                 title="Revenue"
-                count="34k"
+                count="$2000.00"
                 percentage={{
                   color: "success",
-                  amount: "+1%",
-                  label: "than yesterday",
+                  amount: "+0.2%",
+                  label: "Invest Now",
                 }}
               />
             </MDBox>
@@ -91,13 +91,13 @@ function Dashboard() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="primary"
-                icon="person_add"
-                title="Followers"
-                count="+91"
+                icon="receipt"
+                title="Investments"
+                count="0"
                 percentage={{
-                  color: "success",
-                  amount: "",
-                  label: "Just updated",
+                  color: "error",
+                  amount: "0.00%",
+                  label: "Just Updated",
                 }}
               />
             </MDBox>
@@ -128,17 +128,6 @@ function Dashboard() {
                   }
                   date="updated 4 min ago"
                   chart={sales}
-                />
-              </MDBox>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
-                <ReportsLineChart
-                  color="dark"
-                  title="completed tasks"
-                  description="Last Campaign Performance"
-                  date="just updated"
-                  chart={tasks}
                 />
               </MDBox>
             </Grid>
