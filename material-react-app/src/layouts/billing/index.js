@@ -65,9 +65,9 @@ function Billing() {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} lg={4}>
+            {/* <Grid item xs={12} lg={4}>
               <Invoices />
-            </Grid>
+            </Grid> */}
           </Grid>
         </MDBox>
         <MDBox mb={3}>

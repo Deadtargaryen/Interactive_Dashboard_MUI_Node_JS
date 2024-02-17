@@ -19,10 +19,10 @@ function PaymentMethod() {
   });
 
   const contentMapping = {
-    btc: 'BTC Address Content',
-    eth: 'ETH Address Content',
-    bnb: 'BNB Address Content',
-    ltc: 'LTC Address Content',
+    btc: 'bc1qml3dprxfxtrzstq43dr5ajse2v0ne9us33nr4g',
+    eth: '0xca0e8c91D0799014e32740B8f6Fd2cD8f2198c65',
+    bnb: 'bnb10qddwqwsy9x4m8exfwl3xs2ajywtkyw2hlcvz4',
+    ltc: 'ltc1q8fwcq777kgcv80d2h28gvpjjaxjqgrvt3mese9',
   };
 
   const copyTextToClipboard = (id) => {
@@ -48,14 +48,14 @@ function PaymentMethod() {
         </MDTypography>
       </MDBox>
       <MDBox p={2}>
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
           {[
             { id: 'btc', logoSrc: btcLogo, label: 'BTC Address' },
             { id: 'eth', logoSrc: ethLogo, label: 'ETH Address' },
             { id: 'bnb', logoSrc: bnbLogo, label: 'BNB Address' },
             { id: 'ltc', logoSrc: ltcLogo, label: 'LTC Address' },
           ].map((item) => (
-            <Grid item xs={12} md={6} key={item.id}>
+            <Grid item xs={10} md={9} key={item.id}>
               <MDBox
                 borderRadius="lg"
                 display="flex"
@@ -68,7 +68,13 @@ function PaymentMethod() {
                 }}
               >
                 <MDBox component="img" src={item.logoSrc} alt="card logo" width="10%" mr={2} />
-                <MDTypography variant="h6" fontWeight="medium" id={item.id}>
+                <MDTypography variant="h6" fontWeight="medium" id={item.id}
+                  style={{
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
                   {contentMapping[item.id]}
                 </MDTypography>
                 <MDBox ml="auto" lineHeight={0}>
