@@ -1,39 +1,44 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
-import Tooltip from "@mui/material/Tooltip";
-
-// Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
-
-// Images
-import masterCardLogo from "assets/images/logos/mastercard.png";
-import visaLogo from "assets/images/logos/visa.png";
-
-// Material Dashboard 2 React context
-import { useMaterialUIController } from "context";
+import React, { useState } from 'react';
+import { Tooltip, Grid, Snackbar } from '@mui/material';
+import Card from '@mui/material/Card';
+import Icon from '@mui/material/Icon';
+import CheckIcon from '@mui/icons-material/Check';
+import MDBox from 'components/MDBox';
+import MDTypography from 'components/MDTypography';
+import btcLogo from 'assets/images/logos/btc.png';
+import ltcLogo from 'assets/images/logos/ltc.png';
+import ethLogo from 'assets/images/logos/eth.png';
+import bnbLogo from 'assets/images/logos/bnb.png';
 
 function PaymentMethod() {
-  const [controller] = useMaterialUIController();
-  const { darkMode } = controller;
+  const [copiedStatus, setCopiedStatus] = useState({
+    btc: false,
+    eth: false,
+    bnb: false,
+    ltc: false,
+  });
+
+  const contentMapping = {
+    btc: 'BTC Address Content',
+    eth: 'ETH Address Content',
+    bnb: 'BNB Address Content',
+    ltc: 'LTC Address Content',
+  };
+
+  const copyTextToClipboard = (id) => {
+    const textToCopy = document.getElementById(id);
+    const textRange = document.createRange();
+    textRange.selectNode(textToCopy);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(textRange);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    setCopiedStatus({ ...copiedStatus, [id]: true });
+  };
+
+  const handleCloseSnackbar = (id) => {
+    setCopiedStatus({ ...copiedStatus, [id]: false });
+  };
 
   return (
     <Card id="delete-account">
@@ -41,63 +46,56 @@ function PaymentMethod() {
         <MDTypography variant="h6" fontWeight="medium">
           Payment Method
         </MDTypography>
-        <MDButton variant="gradient" color="dark">
-          <Icon sx={{ fontWeight: "bold" }}>add</Icon>
-          &nbsp;add new card
-        </MDButton>
       </MDBox>
       <MDBox p={2}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
-            <MDBox
-              borderRadius="lg"
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-              p={3}
-              sx={{
-                border: ({ borders: { borderWidth, borderColor } }) =>
-                  `${borderWidth[1]} solid ${borderColor}`,
-              }}
-            >
-              <MDBox component="img" src={masterCardLogo} alt="master card" width="10%" mr={2} />
-              <MDTypography variant="h6" fontWeight="medium">
-                ****&nbsp;&nbsp;****&nbsp;&nbsp;****&nbsp;&nbsp;7852
-              </MDTypography>
-              <MDBox ml="auto" lineHeight={0} color={darkMode ? "white" : "dark"}>
-                <Tooltip title="Edit Card" placement="top">
-                  <Icon sx={{ cursor: "pointer" }} fontSize="small">
-                    edit
-                  </Icon>
-                </Tooltip>
+          {[
+            { id: 'btc', logoSrc: btcLogo, label: 'BTC Address' },
+            { id: 'eth', logoSrc: ethLogo, label: 'ETH Address' },
+            { id: 'bnb', logoSrc: bnbLogo, label: 'BNB Address' },
+            { id: 'ltc', logoSrc: ltcLogo, label: 'LTC Address' },
+          ].map((item) => (
+            <Grid item xs={12} md={6} key={item.id}>
+              <MDBox
+                borderRadius="lg"
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                p={3}
+                sx={{
+                  border: ({ borders: { borderWidth, borderColor } }) =>
+                    `${borderWidth[1]} solid ${borderColor}`,
+                }}
+              >
+                <MDBox component="img" src={item.logoSrc} alt="card logo" width="10%" mr={2} />
+                <MDTypography variant="h6" fontWeight="medium" id={item.id}>
+                  {contentMapping[item.id]}
+                </MDTypography>
+                <MDBox ml="auto" lineHeight={0}>
+                  <Tooltip title={copiedStatus[item.id] ? 'Copied!' : `Copy ${item.label}`} placement="top">
+                    {copiedStatus[item.id] ? (
+                      <CheckIcon fontSize="small" />
+                    ) : (
+                      <Icon
+                        sx={{ cursor: 'pointer' }}
+                        fontSize="small"
+                        onClick={() => copyTextToClipboard(item.id)}
+                      >
+                        copy
+                      </Icon>
+                    )}
+                  </Tooltip>
+                </MDBox>
               </MDBox>
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <MDBox
-              borderRadius="lg"
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-              p={3}
-              sx={{
-                border: ({ borders: { borderWidth, borderColor } }) =>
-                  `${borderWidth[1]} solid ${borderColor}`,
-              }}
-            >
-              <MDBox component="img" src={visaLogo} alt="master card" width="10%" mr={2} />
-              <MDTypography variant="h6" fontWeight="medium">
-                ****&nbsp;&nbsp;****&nbsp;&nbsp;****&nbsp;&nbsp;5248
-              </MDTypography>
-              <MDBox ml="auto" lineHeight={0} color={darkMode ? "white" : "dark"}>
-                <Tooltip title="Edit Card" placement="top">
-                  <Icon sx={{ cursor: "pointer" }} fontSize="small">
-                    edit
-                  </Icon>
-                </Tooltip>
-              </MDBox>
-            </MDBox>
-          </Grid>
+              <Snackbar
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                open={copiedStatus[item.id]}
+                autoHideDuration={3000}
+                onClose={() => handleCloseSnackbar(item.id)}
+                message="Copied to clipboard!"
+              />
+            </Grid>
+          ))}
         </Grid>
       </MDBox>
     </Card>

@@ -122,7 +122,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           mb={1}
           ml={1}
         >
-          {title}
+          CyrptoVerse
         </MDTypography>
       );
     } else if (type === "divider") {

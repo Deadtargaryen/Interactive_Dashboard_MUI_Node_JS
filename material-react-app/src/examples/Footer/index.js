@@ -69,7 +69,7 @@ function Footer({ company, links }) {
         by
         <Link href="https://updivision.com" target="_blank">
           <MDTypography variant="button" fontWeight="medium">
-            &nbsp;Cryptoverse&nbsp;
+            &nbsp;EliteXtrading&nbsp;
           </MDTypography>
         </Link>
         for better Crypto Investments.
@@ -99,9 +99,9 @@ function Footer({ company, links }) {
 
 // Setting default values for the props of Footer
 Footer.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "#", name: "Creative Tim" },
   links: [
-    { href: "https://updivision.com/", name: "CryptoVerse" },
+    { href: "#", name: "EliteXtrading" },
     { href: "https://www.creative-tim.com/presentation", name: "About Us" },
     { href: "https://www.creative-tim.com/license", name: "License" },
   ],

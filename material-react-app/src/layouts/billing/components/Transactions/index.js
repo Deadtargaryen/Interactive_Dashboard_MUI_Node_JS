@@ -24,7 +24,7 @@ import MDTypography from "components/MDTypography";
 // import MDButton from "components/MDButton";
 
 // Billing page components
-import Transaction from "layouts/billing/components/Transaction";
+// import Transaction from "layouts/billing/components/Transaction";
 
 function Transactions() {
   return (
@@ -40,14 +40,14 @@ function Transactions() {
             </Icon>
           </MDBox>
           <MDTypography variant="button" color="text" fontWeight="regular">
-            23 - 30 March 2020
+            NA
           </MDTypography>
         </MDBox>
       </MDBox>
       <MDBox pt={3} pb={2} px={2}>
         <MDBox mb={2}>
           <MDTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
-            newest
+            no transactions yet!
           </MDTypography>
         </MDBox>
         <MDBox
@@ -58,7 +58,7 @@ function Transactions() {
           m={0}
           sx={{ listStyle: "none" }}
         >
-          <Transaction
+          {/* <Transaction
             color="error"
             icon="expand_more"
             name="Netflix"
@@ -71,13 +71,13 @@ function Transactions() {
             name="Apple"
             description="27 March 2020, at 04:30 AM"
             value="+ $ 2,000"
-          />
+          /> */}
         </MDBox>
-        <MDBox mt={1} mb={2}>
+        {/* <MDBox mt={1} mb={2}>
           <MDTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
             yesterday
           </MDTypography>
-        </MDBox>
+        </MDBox> */}
         <MDBox
           component="ul"
           display="flex"
@@ -86,7 +86,7 @@ function Transactions() {
           m={0}
           sx={{ listStyle: "none" }}
         >
-          <Transaction
+          {/* <Transaction
             color="success"
             icon="expand_less"
             name="Stripe"
@@ -113,7 +113,7 @@ function Transactions() {
             name="Webflow"
             description="26 March 2020, at 05:00 AM"
             value="Pending"
-          />
+          /> */}
         </MDBox>
       </MDBox>
     </Card>

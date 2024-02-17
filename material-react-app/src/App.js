@@ -173,44 +173,44 @@ export default function App() {
         <Helmet>
           <meta
             name="keywords"
-            content="CryptoCurrency Investments Firm"
+            content="EliteXtrading Investments Firm"
           />
           <meta
             name="description"
-            content="CryptoCurrency Investments Firm"
+            content="EliteXtrading Investments Firm"
           />
           <meta
             itemProp="name"
-            content="CryptoCurrency Investments Firm"
+            content="EliteXtrading Investments Firm"
           />
           <meta
             itemProp="description"
-            content="CryptoCurrency Investments Firm"
+            content="EliteXtrading Investments Firm"
           />
           <meta
             itemProp="image"
             content="https://s3.amazonaws.com/creativetim_bucket/products/157/original/react-material-dashboard-nodejs.jpg?1664786816"
           />
           <meta name="twitter:card" content="product" />
-          <meta name="twitter:site" content="@creativetim" />
+          <meta name="twitter:site" content="@ideozu_adaeze" />
           <meta
             name="twitter:title"
-            content="CryptoCurrency Investments Firm"
+            content="EliteXtrading Investments Firm"
           />
           <meta
             name="twitter:description"
-            content="CryptoCurrency Investments Firm"
+            content="EliteXtrading Investments Firm"
           />
-          <meta name="twitter:creator" content="@deadtargaryan" />
+          <meta name="twitter:creator" content="@ideozu_adaeze" />
           <meta
             property="og:title"
-            content="CryptoCurrency Investments Firm"
+            content="EliteXtrading Investments Firm"
           />
           <meta
             property="og:description"
-            content="CryptoCurrency Investments Firm"
+            content="EliteXtrading Investments Firm"
           />
-          <meta property="og:site_name" content="CryptoVerse" />
+          <meta property="og:site_name" content="EliteXtrading" />
         </Helmet>
       )}
       {direction === "rtl" ? (
@@ -222,7 +222,7 @@ export default function App() {
                 <Sidenav
                   color={sidenavColor}
                   brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-                  brandName="Material Dashboard 2"
+                  brandName="CryptoVerse"
                   routes={routes}
                   onMouseEnter={handleOnMouseEnter}
                   onMouseLeave={handleOnMouseLeave}
@@ -249,7 +249,7 @@ export default function App() {
               <Sidenav
                 color={sidenavColor}
                 brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-                brandName="Material Dashboard 2"
+                brandName="CryptoVerse"
                 routes={routes}
                 onMouseEnter={handleOnMouseEnter}
                 onMouseLeave={handleOnMouseLeave}
