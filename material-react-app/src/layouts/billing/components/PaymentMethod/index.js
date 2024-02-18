@@ -9,6 +9,7 @@ import btcLogo from 'assets/images/logos/btc.png';
 import ltcLogo from 'assets/images/logos/ltc.png';
 import ethLogo from 'assets/images/logos/eth.png';
 import bnbLogo from 'assets/images/logos/bnb.png';
+import usdtLogo from 'assets/images/logos/usdt.png';
 
 function PaymentMethod() {
   const [copiedStatus, setCopiedStatus] = useState({
@@ -16,6 +17,7 @@ function PaymentMethod() {
     eth: false,
     bnb: false,
     ltc: false,
+    usdt: false,
   });
 
   const contentMapping = {
@@ -23,6 +25,7 @@ function PaymentMethod() {
     eth: '0xca0e8c91D0799014e32740B8f6Fd2cD8f2198c65',
     bnb: 'bnb10qddwqwsy9x4m8exfwl3xs2ajywtkyw2hlcvz4',
     ltc: 'ltc1q8fwcq777kgcv80d2h28gvpjjaxjqgrvt3mese9',
+    usdt: 'THnBDRE2yJHiKGF66JjY3mXnkYLfiygED8',
   };
 
   const copyTextToClipboard = (id) => {
@@ -54,6 +57,7 @@ function PaymentMethod() {
             { id: 'eth', logoSrc: ethLogo, label: 'ETH Address' },
             { id: 'bnb', logoSrc: bnbLogo, label: 'BNB Address' },
             { id: 'ltc', logoSrc: ltcLogo, label: 'LTC Address' },
+            { id: 'usdt', logoSrc: usdtLogo, label: 'USDT Address' },
           ].map((item) => (
             <Grid item xs={10} md={9} key={item.id}>
               <MDBox
